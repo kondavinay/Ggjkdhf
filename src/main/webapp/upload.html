@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<style>
+        table 
+        {
+            width: 100%;
+            font: 17px Calibri;
+        }
+        table, th, td 
+        {
+            border: solid 1px #DDD;
+            border-collapse: collapse;
+            padding: 2px 3px;
+            text-align: center;
+        }
+        .input, div {
+            font:13px Verdana;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Customer Statement Processor</h1>
+
+<form method="POST">
+    <input type="radio" name="fileName" value="csv" checked=checked/> CSV FILE
+    <input type="radio" name="fileName" value="xml"/> XML FILE
+    <input type="radio" name="fileName" value="failedtnx"/> FAILED TRANACTION 
+    <br/><br/>
+    <input type="submit" value="Submit" id="btnSubmit"/>
+</form>
+
+<h1>Result</h1>
+<pre>
+    <span id="result"></span>
+       <table id=myTable></table>
+</pre>
+
+<script type="text/javascript"
+        src="webjars/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
